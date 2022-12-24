@@ -22,7 +22,7 @@ function unmark_pane
 
 function swap_marked_pane_with_curr_pane
 {
-  tmux swap-pane
+  tmux swap-pane -d
 }
 
 if is_any_pane_marked; then
