@@ -15,6 +15,11 @@ function toggle_mark_curr_pane
   tmux select-pane -m
 }
 
+function unmark_pane
+{
+  tmux select-pane -M
+}
+
 function swap_marked_pane_with_curr_pane
 {
   tmux swap-pane
@@ -25,6 +30,7 @@ if is_any_pane_marked; then
     toggle_mark_curr_pane
   else
     swap_marked_pane_with_curr_pane
+    unmark_pane
   fi
 else
   toggle_mark_curr_pane
